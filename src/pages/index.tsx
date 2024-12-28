@@ -14,8 +14,8 @@ export default function Home() {
       </Head>
       <main>
         <div className="row px-5">
-          <div className="col-md-8"></div>
-          <div className="col-md-4 bg-color">
+          <div className="col-md-8 col-sm-12"></div>
+          <div className="col-md-4 col-sm-12 bg-color">
             <div className="logo text-center mb-4">
               <Image src="/img/logo.png" alt="Logo" width={300} height={100} />
             </div>
