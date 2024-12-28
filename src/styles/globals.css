@@ -48,9 +48,19 @@ body {
   height: 70px;
   cursor: pointer;
   font-size: 1.3em;
-  padding: 20px 150px;
+  padding: 5% 30%;
   border: 2px solid #fff;
   
+}
+@media screen and (max-width: 1236px) {
+  .reg-btn {
+    padding: 5% 20%;
+  }
+}
+@media screen and (max-width: 864px) {
+  .reg-btn {
+    padding: 5% 10%;
+  }
 }
 a.reg-btn {
   text-decoration: none;
