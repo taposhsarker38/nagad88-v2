@@ -5,25 +5,81 @@
   box-sizing: border-box;
 }
 
-/* Body styles */
 body {
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  background-image: url('/img/BG-With-Assets_Desktop-min.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+
 }
-.bg-color{
- height: 100vh;
-  background-color: #000000;
+
+
+/* Large device background image */
+@media (min-width: 992px) {
+  .main-bg {
+    background-image: url('/img/BG-With-Assets_Desktop-min.jpg');
+    /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* Full viewport height */
+  }
+
+  .form-container {
+    margin-left: auto;
+    /* Push the form to the right */
+    margin-right: auto;
+    /* Center align the form horizontally */
+  }
+}
+
+.bg-image {
+  position: relative;
+  background-color: #000;
+}
+
+.full-bg-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.form-container {
+  margin: auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.bg-dark {
+  padding: 40px;
+  min-height: 100vh;
+  background-color: #000000 !important;
   border: 1px solid #fff;
-  
 }
+
+/* Tablet-Specific Adjustments */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .tablet-bg-image {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .tablet-form-container {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 767.98px) {
+
+
+  .bg-dark {
+    min-height: unset;
+  }
+}
+
 .title {
   text-align: center;
   color: #F38C33 !important;
@@ -34,13 +90,16 @@ body {
   line-height: 0.1em;
   margin-bottom: 55px;
 }
-.bangla-text {text-align: center;
+
+.bangla-text {
+  text-align: center;
   color: #FFFFFF;
   font-family: "Roboto", Sans-serif;
   font-size: 15px;
   font-weight: 600;
 }
-.reg-btn{
+
+.reg-btn {
   background-color: #F5A35C;
   color: white;
   font-weight: bold;
@@ -48,35 +107,68 @@ body {
   height: 70px;
   cursor: pointer;
   font-size: 1.3em;
-  padding: 5% 30%;
+  padding: 20px 120px;
   border: 2px solid #fff;
-  
 }
-@media screen and (max-width: 1236px) {
+
+.mar {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .reg-btn {
+    padding: 5% 28%;
+
+  }
+
+  .mar {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .reg-btn {
+    padding: 5% 25%;
+
+  }
+
+  .mar {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 764px) {
   .reg-btn {
     padding: 5% 20%;
   }
-}
-@media screen and (max-width: 864px) {
-  .reg-btn {
-    padding: 5% 10%;
+
+  .bg-dark {
+    padding: 15px !important;
+  }
+
+  h2.title {
+    font-size: 18px !important;
   }
 }
+
 a.reg-btn {
   text-decoration: none;
 }
-.mt{
+
+.mt {
   margin-top: 50px;
 }
-.form{
+
+.form {
   margin-bottom: 20px;
   margin-top: 30px;
 }
-.form-input input{
+
+.form-input input {
   line-height: 18px;
   padding: 10px 16px;
   min-height: 40px;
   font-size: .9rem;
   width: 95%;
-  margin: 0px 10px;}
-
+  margin: 0px 10px;
+}
